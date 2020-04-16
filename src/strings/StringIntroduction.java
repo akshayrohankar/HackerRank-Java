@@ -18,22 +18,7 @@ public class StringIntroduction {
 
 		System.out.println(sum);
 		
-		
-		char[] arrayA = A.toCharArray();
-		Arrays.sort(arrayA);
-		String tempA = String.valueOf(arrayA);
-	//	System.out.println(tempA);
-		
-		char[] arrayB = B.toCharArray();
-		Arrays.sort(arrayB);
-		String tempB = String.copyValueOf(arrayB);
-	//	System.out.println(tempB);
-			
-		if(tempA.charAt(0)<tempB.charAt(0)) {
-			System.out.println("Yes");
-		}else
-			System.out.println("No");
-		
+		System.out.println(A.compareTo(B) > 0 ? "Yes" : "No");
 		
 		StringBuilder builder = new StringBuilder();
 		A=A.substring(0,1).toUpperCase()+A.substring(1);
