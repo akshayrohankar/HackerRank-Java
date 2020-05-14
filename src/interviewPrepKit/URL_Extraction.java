@@ -20,7 +20,7 @@ public class URL_Extraction {
 				
 				
 				//String domainNameFiltered = domainNameWordArray[1];
-				//changes
+				//changes need
 				
 			//	System.out.println(domainNameFiltered);
 				
