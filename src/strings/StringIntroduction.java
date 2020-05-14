@@ -1,6 +1,5 @@
 package strings;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class StringIntroduction {
@@ -29,6 +28,7 @@ public class StringIntroduction {
 		builder.append(B);
 		
 		System.out.println(builder);
+		sc.close();
 	}
 
 }
