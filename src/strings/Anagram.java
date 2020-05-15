@@ -1,6 +1,5 @@
 package strings;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Anagram {
@@ -10,15 +9,22 @@ public class Anagram {
 
 	static boolean isAnagram(String a, String b) {
 
+		a=a.toLowerCase();
+		b=b.toLowerCase();
+		
 		if(a.length() != b.length()) {
 			return false;
 		}
 
-		char[] a1 = a.toCharArray(); 
-		char[] b1 = b.toCharArray(); 
+		//without built in method
+		char[] a1 = SortCharArray(a); 
+		char[] b1 = SortCharArray(b);
+		
 
-		Arrays.sort(a1);
-		Arrays.sort(b1);
+		
+		//with build in method
+		//Arrays.sort(a1);
+		//Arrays.sort(b1);
 
 		for (int i = 0; i < a1.length; i++){
 			if (a1[i] != b1[i]) 
@@ -26,6 +32,24 @@ public class Anagram {
 		}
 
 		return true;
+	}
+	
+	public static char[] SortCharArray(String input) {
+		
+		char[] inputArray = input.toCharArray();
+		char temp = ' ';
+		
+		for (int i= 0;  i< inputArray.length; i++) {	
+			for (int j = 0; j < inputArray.length; j++) {
+				if (inputArray[j]>inputArray[i]) {
+					temp = inputArray[i];
+					inputArray[i]=inputArray[j];
+					inputArray[j]=temp;
+				}
+			}
+		}
+		return inputArray;
+		
 	}
 
 	public static void main(String[] args) {
