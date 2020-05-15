@@ -6,7 +6,7 @@ public class Anagram {
 
 	//Two strings,  and , are called anagrams if they contain all the same characters in the same frequencies. 
 	//For example, the anagrams of CAT are CAT, ACT, TAC, TCA, ATC, and CTA.
-
+//kk
 	static boolean isAnagram(String a, String b) {
 
 		a=a.toLowerCase();
